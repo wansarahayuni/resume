@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Welcome to Wan Sarah Ayuni Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+<body><body background="images/bg7.jpg">
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("❄️");
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Wan Sarah Ayuni<br>Wan Mustapha Kamal</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="summary.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Personal</a> 
+    <a href="education.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Education</a> 
+    <a href="skills.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Skills</a> 
+    <a href="awards.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Awards</a> 
+    <a href="curricular.html" onclick="w3_close()" class="w3-bar-item
+    w3-bar-item w3-button w3-hover-white">Curricular</a> 
+    <a href="experiences.html" onclick="w3_close()" class="w3-bar-item
+        w3-bar-item w3-button w3-hover-white">Experiences</a> 
+    <a href="hobbies.html" onclick="w3_close()" class="w3-bar-item
+     w3-button w3-hover-white">Hobbies</a> 
+     <a href="family.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Family</a>
+    <a href="references.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">References</a>
+     <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>My Personal Information</span>
+</header>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+<audio controls="autoplay">
+  <source src="music/myaudio.mp3" type="audio/mpeg"></audio>
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1><font color="navy"><marquee direction="right">Personal Information</marquee><font></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<font face= "arial">
+<p align="center">
+<img src="images/sarahayuni.jpg" width="200" height="230">
+<p align="center"><font face="arial"color="black" size="3"><b>
+<br>Name: Wan Sarah Ayuni Wan Mustapha Kamal
+<br>Address: PT 5255, Taman D' Bangun, Gong Kepas, 22200 Besut, Terengganu.
+<br>E-mail: wansarahayuni@gmail.com</p><font>
+  <h1><font color="blue">
+    <h3 class="w3-xxxlarge w3-text-blue/"><b>Personal Summary</b></h3>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+  </div>
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+<p align="center"><font face= "arial"color="black" size="3"><b>     
+<p align="justify">
+I am a conscientious, confident, and self- motivated person. I have overwhelming interest in marketing, creating content, market reseacrh,
+and financing.</p>
+<p align="justify">
+I am also will able to learn new skill and knowledge in short period. Seeking an apprenticeship in the marketing industry to build upon a interest in marketing and start a career as a marketing researcher.</p>
+<p align="justify">
+In addition to this, my career goal is to assume a role which allows me to take responsibility for the analysis and interpretation of commercial data for a well-respected and market-leading leading company.</p>
+
+  
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>My Education Background</b></h1>
+
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<font face= "arial">
+<p align="center"><img src="images/uitm.gif" height="160" width="130">
+<p align="center"><font face= "arial"color="black" size="3"><b>Program Name:  Bachelor of Business Administration (Hons) Marketing
+<br><br>Institution: Faculty of Business and Management, UiTM Campus Kota Bharu, Kelantan Branch 
+<br><br>CGPA: 3.68
+<br><br>Field: Marketing 
+ 
+<br><br><br>
+<font face= "arial">
+<p align="center"><img src="images/uitm.gif" height="160" width="130">
+<p align="center"><font face= "arial"color="black" size="3"><b>Program Name:  Diploma in Investment Analysis
+<br><br>Institution: Faculty of Business and Management, UiTM Campus Dungun, Terengganu Branch 
+<br><br>CGPA: 3.30
+<br><br>Field: Investment Analysis 
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>My Skills</b></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<p align="center"><font face= "arial"color="black" size="3"><b>
+<ul>
+  <li type="square">Proficient in Microsoft word, Power Point and excel.</li>
+  <br>
+<li type="square">Familiar with some multimedia applications such as CapCut, VN, Adobe Photoshop and Canva.</li>
+ <br>
+ <li type="square">Able to write and speak fluently in Bahasa Melayu and English and minor in Arabic.</li>
+<br>
+<li type="square">Good in leading work in group and good in time management.</li>
+</ul>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Awards</b></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<font face="arial"color="black"size="3"><p align="left">
+Dean's list award for last semester in Diploma in Investing Analysis UiTM Dungun 
+<font face="arial"color="black"size="3"><p align="left">
+Dean's list award for 2nd semester in Bachelor of Marketing UiTM Kota Bharu
+
+<br>
+ <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Curricular</b></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<p align="center"><font face= "arial"color="black" size="3">
+ <ol>
+  <br><li>Special Project "Bengkel LCCEET" by VCSP club, UiTM Dungun (2018)</li><p align="center"><a href="file:///C:/Users/wansa/OneDrive/Desktop/html2/images/vcsp2.png"><img src="images/vcsp2.png" height="160" width="300"></a><br>
+
+  <br><li>Program Anak Angkat by Le'Investiur club, UiTM Dungun (2019)</li><p align="center"><a href="file:///C:/Users/wansa/OneDrive/Desktop/html2/images/anak.jpg"><img src="images/anak.jpg" height="180" width="150"></a><br>
+
+  <br><li> Go Green Events at SK Tanjung Sura, Dungun (2019)</li><p align="center"><a href="file:///C:/Users/wansa/OneDrive/Desktop/html2/images/green.png"><img src="images/green.png" height="160" width="300"></a><br>
+
+  <br><li> Exco of VCSP, UiTM Dungun (2018 - 2020)</li>
+  <p align="center"><a href="file:///C:/Users/wansa/OneDrive/Desktop/html2/images/vcsp.jpg"><img src="images/vcsp.jpg" height="160" width="300"></a><br>
+</ol> 
+<br><br>
+
+<h1 class="w3-xxxlarge w3-text-blue"><b>Experiences</b></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<p align="center"><font face= "arial"color="black" size="5">
+ <h2>Akazmaju Sdn Bhd</h2>
+<p align="center"><font face= "arial"color="black" size="3">
+<dl>
+  <dt>Part-timer as sales clerk</dt>
+  <br><dd>- Have prepared and completed several sales data during part timer work.</dd>
+ <br><dd>- Able to give ideas generations to the company.</dd>
+ <br><dd>- Able to monitoring, measuring, and analyzing the effectiveness of marketing initiatives as relate to the overall company's goals.</dd>
+</dl>
+
+<br>
+<h1 class="w3-xxxlarge w3-text-blue"><b>Hobbies</b></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<ol>
+<p align="center"><font face= "arial"color="black" size="3"><b><li>Travelling.</li><br>
+<li>Creating content in social media.</li><br>
+<li>Organizing stuff.</li><br>
+<li>Involve in society volunteering.</li>
+         </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Contact -->
+  
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Family background</b></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<p align="center"><font face= "arial"color="black" size="3"><b>
+<ul>
+  <li type="circle">Father: Wan Mustapha Kamal Wan Mohd Nor (Contractor)</li>
+<br><li type="circle">Mother: Wan Kamal Asmida Wan Hasan (Clerk)</li>
+<br><li type="circle">Brother: Wan Syafiq Azri Wan Mustapha Kamal (Student at UMT, Terengganu)</li>
+<br></li><li type="circle">Younger brother: Wan Syahmi Arif Wan Mustapha Kamal (Student at SMK Tengku Mahmud II, Besut)</li>
+<br><li type="circle">Younger brother: Wan Syameer Aqil Wan Mustapha Kamal (Student at SK Tengku Mahmud I, Besut)</li>
+
+<div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>References</b></h1>
+    <hr style="width:50px;border:5px solid navy" class="w3-round">
+<p align="center"><font face= "arial"color="black" size="3"><b>     
+<p align="justify">
+Pn. Ruhani binti Muhamad 
+<p align="justify">
+Senior Lecturer at Faculty of Business and Management, UiTM Cawangan Kelantan.
+<p align="justify">
+E-Mail: ruhani929@uitm.edu.my
+<p align="justify">Tel no: 019-9787330
+
+ <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Contact Me!</b></h1>
+<p align="center"><font face= "arial"color="black" size="3"><b> <hr style="width:50px;border:5px solid navy" class="w3-round">E-mail: wansarahayuni@gmail.com
+<br><br>Twitter: @sarahayunie
+<br><br>Instagram: @wn.srh
+<br><br>Facebook: Sarah Ayunie
+   
+           </li>
+        </ul>
+      </div>
+    </div>
+<!-- End page content -->
+
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
